@@ -1,0 +1,144 @@
+!SceneAsset
+Id: 79b43521-c39d-4e53-84dd-6fe2478bbe0d
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 4dae982a-5a67-46e5-8ddf-0d5d382e92cd
+        - ref!! 64949fb1-57b8-4a5c-9a7c-75b8c22843db
+        - ref!! 286dd88e-6976-41a4-9244-d697eeb1bfe1
+        - ref!! a9fbd88c-b44f-4bb1-8fbf-71f98ccafec4
+        - ref!! 97332a3e-df47-4bf1-8fc0-7f9c69f066cb
+    Parts:
+        -   Entity:
+                Id: 286dd88e-6976-41a4-9244-d697eeb1bfe1
+                Name: Skybox
+                Components:
+                    a71156b01a0d6668c1300ab6ee804af7: !TransformComponent
+                        Id: 95df83b5-0550-44f1-8e62-6f30dbf1338f
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c93e1bee9ee3fde6734471ea3d126199: !BackgroundComponent
+                        Id: b464e2a5-9f31-4dfe-b9cd-14736df86a33
+                        Texture: 4642ef1f-b29a-4023-8819-e81f9ebc4868:Skybox texture
+                    0ac3196fce781bcc7a129e5f0035bfcc: !LightComponent
+                        Id: 8a88eff5-bd02-4fa6-8301-7eea79753566
+                        Type: !LightSkybox
+                            Skybox: 9821694f-3696-46c3-97cd-70fe733bd624:Skybox
+        -   Entity:
+                Id: 4dae982a-5a67-46e5-8ddf-0d5d382e92cd
+                Name: Camera
+                Components:
+                    b52df11c083fcaaeef37999717e6d51b: !TransformComponent
+                        Id: baa261ac-17f1-4305-b9fb-df4d11764220
+                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    28a04f56ac3ebbb6872dae6b8f75670e: !CameraComponent
+                        Id: 03574aaf-9316-408f-b7bd-da0870e428fc
+                        Name: null
+                        Projection: Perspective
+                        Slot: 21e09e79-aa2a-4e24-bdd9-fc30f6ac94f6
+                    2800f8cd3e496b43e733e968bf1c943f: !testbepu.BasicCameraController,testbepu
+                        Id: 7ee7d1c5-411f-49b3-9165-a6585c6800d7
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
+        -   Entity:
+                Id: 64949fb1-57b8-4a5c-9a7c-75b8c22843db
+                Name: Directional light
+                Components:
+                    fa666f92216e3d059ee109e138778e19: !TransformComponent
+                        Id: 1d6efc3c-3693-49d7-9d73-36fb9e8872a0
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a7aeb43bcd3eaf180a23588c4e2bea08: !LightComponent
+                        Id: 0745a91f-90db-4beb-a6fb-c96cb6e4941f
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 97332a3e-df47-4bf1-8fc0-7f9c69f066cb
+                Name: Sphere
+                Components:
+                    0b73ee7ffaa58a8e6cd0f79c951e6552: !TransformComponent
+                        Id: dc5a2474-9ecf-4567-a7af-94d7f9f8f39f
+                        Position: {X: 0.0, Y: 5.0009675, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fedc260015075d110585e7cbc1a133a0: !ModelComponent
+                        Id: 9ecd8f15-7b48-4c19-88b3-f8eb0919d95b
+                        Model: 59d2fc8c-f4ff-4a0d-8684-3b1081cb9b94:Sphere
+                        Materials: {}
+                    daaf427b389c560acb9a981c67b7c17a: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: c4160c7a-fb0f-47fb-9d65-e0b6b63298b2
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                2fe81019fa1d9c1c65f591689cf73ec7: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.5
+                        ContactEventHandler: null
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        Kinematic: false
+                        Gravity: true
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+        -   Entity:
+                Id: a9fbd88c-b44f-4bb1-8fbf-71f98ccafec4
+                Name: Ground
+                Components:
+                    df7af27b61af66e2f3d23e86e00809a1: !TransformComponent
+                        Id: 748dd58d-ad28-4ae1-91d9-62654dad3626
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    14478cb57e2d15425cc1f50faca55b7b: !ModelComponent
+                        Id: dc54fde1-aa6e-4274-a37d-4727fb531418
+                        Model: 61109247-47a0-466e-98a2-ac56ac5ec11d:Ground
+                        Materials: {}
+                    e2c78e345ac2e401b42db593fd368fb9: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: f883f04f-4782-4c90-8df9-a958c07d1640
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                56b1529252d67811df63afdce926672c: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 10.0, Y: 0.01, Z: 10.0}
+                        ContactEventHandler: null
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
