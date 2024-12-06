@@ -34,8 +34,8 @@ Defaults:
                 PoseGravity: {X: 0.0, Y: -9.8, Z: 0.0}
                 PoseLinearDamping: 0.05
                 PoseAngularDamping: 0.05
-                SolverIteration: 8
-                SolverSubStep: 1
+                SolverIteration: 1
+                SolverSubStep: 8
                 SoftStartDuration: 0:00:00:01.0000000
                 SoftStartSubstepFactor: 4
 Overrides: []
